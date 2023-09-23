@@ -3,10 +3,9 @@ document.addEventListener("DOMContentLoaded", function () {
     form.addEventListener("submit", function (event) {
         event.preventDefault();
         const vintedLink = document.getElementById("vinted_link_input").value;
-        if (vintedLink !== "") {
+        if (vintedLink.includes('vinted')) {
             console.log("Añadiendo visitas")
             generator(vintedLink)
-            alert("Añadiendo visitas");
         } else {
             console.log("Formulario vacío")
         }
@@ -14,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function generator(vinted_link) {
-    const threadsInput = '1'; // Establece el valor de threadsInput en 1
+    const threadsInput = '1';
 
     if (!vinted_link.includes('vinted')) {
         console.log('Invalid vinted link');

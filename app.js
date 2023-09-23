@@ -1,7 +1,6 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
-const { PythonShell } = require('python-shell');
 const path = require('path');
 
 const port = 3000;
@@ -14,5 +13,5 @@ app.get('/', (req, res) => {
 });
 
 app.listen(port, () => {
-    console.log(`Servidor escuchando en http://localhost:${port}`);
+    console.log(`Servidor iniciado en http://localhost:${port}`);
 });
