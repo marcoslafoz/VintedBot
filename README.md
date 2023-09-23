@@ -2,6 +2,8 @@
 
 Vinted Views Generator Bot.
 
+[Imgur](https://i.imgur.com/QGIPpvV.png)
+
 ## Getting Started
 
 ### Prerequisites
