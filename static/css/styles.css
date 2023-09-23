@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: #f4f4f4;
@@ -47,34 +48,3 @@ button:hover {
     background-color: #005f68;
     transform: scale(1.1);
 }
-
-/* Estilo para el div emergente */
-#divEmergente {
-    max-width: 600px;
-    margin: 0 auto;
-    margin-top: 10px;
-    text-align: center;
-    padding: 20px;
-    background-color: #428f40;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    color: white;
-}
-
-#divEmergenteFail {
-    max-width: 600px;
-    margin: 0 auto;
-    margin-top: 10px;
-    text-align: center;
-    padding: 20px;
-    background-color: #ff4848;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    color: white;
-}
-
-/* Clase para ocultar el div emergente por defecto */
-.oculto {
-    display: none;
-}
-

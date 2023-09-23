@@ -7,7 +7,7 @@
     <title>VintedBot</title>
     <link rel="stylesheet" type="text/css" href="/static/css/styles.css">
     <link rel="icon" href="https://static.vinted.com/assets/favicon/default/apple-touch-icon-304950b8dc9146734ffe4fee1d5837f698492a61a5b562369eb32e212a3ea306.png" type="image/x-icon">
-
+    <script src="/static/scripts/main.js"></script>
 </head>
 
 <body>
@@ -15,12 +15,9 @@
         <h1>Ingresa el enlace del producto de Vinted:</h1>
         <form id="vinted-form" method="POST">
             <input type="text" name="vinted_link" id="vinted_link_input" placeholder="Escribe el enlace aquí">
-            <button type="submit" id="botonSubmit" onclick="alertBox()">Enviar</button>
+            <button type="submit" id="botonSubmit">Enviar</button>
         </form>
     </div>
-    <div id="divEmergente" class="oculto">Añadiendo visitas</div>
-    <script src="/static/scripts/main.js"></script>
-    <script src="/static/scripts/alertBox.js"></script>
 </body>
 
 </html>
