@@ -2,7 +2,7 @@
 
 Vinted Views Generator Bot.
 
-[Imgur](https://i.imgur.com/QGIPpvV.png)
+![Esta es una imagen de ejemplo](https://i.imgur.com/QGIPpvV.png)
 
 ## Getting Started
 
