@@ -1,7 +1,8 @@
 {
   "author": "marcoslafoz",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "python-shell": "^5.0.0"
   },
   "description": "Vinted views bot",
   "license": "ISC",
