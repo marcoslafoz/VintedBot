@@ -1,47 +1,50 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const form = document.querySelector("#vinted-form")
+    const form = document.querySelector("#vinted-form");
 
     form.addEventListener("submit", (event) => {
-        event.preventDefault()
-        const vintedLink = document.getElementById("vinted_link_input").value
-        const vintedViews = document.getElementById("vinted_views_input").value
+        event.preventDefault();
+        const vintedLink = document.getElementById("vinted_link_input").value;
+        const vintedViews = document.getElementById("vinted_views_input").value;
 
-        if (vintedLink != "") {
-            generator(vintedLink, vintedViews)
-            alert("Añadiendo " + vintedViews + " visitas" )
+        if (isValidLink(vintedLink) == true && vintedViews > 0 && vintedViews < 100) {
+            generateVisits(vintedLink, vintedViews);
+            alert("Adding " + vintedViews + " visits");
         } else {
-            alert("El enlace no es valido o la cantidad de visitas es invalida (0-100)")
+            alert("The link is invalid or the number of visits is invalid (0-100)");
         }
     });
 
-    async function generator(vinted_link, views) {
-        
-        const threads = 1
-        let ctr = 0
+    function isValidLink(vintedLink) {
+        return vintedLink.includes("https://www.vinted.es/items/");
+    }
+
+    async function generateVisits(vintedLink, views) {
+        const threads = 1;
+        let counter = 0;
 
         const main = async () => {
             const headers = {
                 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Safari/537.36'
             };
 
-            for (i = 0 ; i < views ; i++) {
+            for (let i = 0; i < views; i++) {
                 try {
-                    const response = await fetch(vinted_link, { headers })
+                    const response = await fetch(vintedLink, { headers });
 
                     if (response.status === 200) {
-                        ctr++;
-                        await new Promise(resolve => setTimeout(resolve, 1000))
+                        counter++;
+                        await new Promise(resolve => setTimeout(resolve, 1000));
                     } else if (response.status === 429) {
-                        await new Promise(resolve => setTimeout(resolve, 5000))
+                        await new Promise(resolve => setTimeout(resolve, 5000));
                     } else {
-                        await new Promise(resolve => setTimeout(resolve, 3000))
+                        await new Promise(resolve => setTimeout(resolve, 3000));
                     }
                 } catch (e) {
-                    await new Promise(resolve => setTimeout(resolve, 2000))
+                    await new Promise(resolve => setTimeout(resolve, 2000));
                 }
             }
 
-            alert("Se han añadido " + views + " visitas")
+            alert("Added " + views + " visits");
         };
 
         const runThreads = () => {
@@ -49,11 +52,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 try {
                     main(i);
                 } catch (e) {
-                    setTimeout(() => { }, 1000)
+                    setTimeout(() => { }, 1000);
                 }
             }
         };
 
-        runThreads()
+        runThreads();
     }
-})
+});
