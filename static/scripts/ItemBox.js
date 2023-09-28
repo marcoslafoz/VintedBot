@@ -1,8 +1,8 @@
 function showViews(views) {
 
     let realViews = views+1
-    const elemento = document.getElementById("viewsText")
-    elemento.textContent = ("+" + realViews + " 👁️")
+    const viewsBox = document.getElementById("viewsText")
+    viewsBox.textContent = ("+" + realViews + " 👁️")
 }
 
 function loadItemBox(vintedURL) {
@@ -29,4 +29,3 @@ function loadItemBox(vintedURL) {
 
     document.body.appendChild(divPrincipal)
 }
-

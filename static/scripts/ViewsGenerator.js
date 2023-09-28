@@ -28,8 +28,7 @@ async function generateVisits(vintedLink, views) {
             showViews(i)
         }
 
-        // TODO:
-        //alert("Added " + views + " visits")
+        alert("Added " + views + " visits")
     }
 
     const runThreads = () => {
