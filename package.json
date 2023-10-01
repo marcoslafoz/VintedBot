@@ -8,7 +8,7 @@
   "main": "index.js",
   "name": "lafozvintedbot",
   "scripts": {
-    "test": "node app.js"
+    "start": "node ./app.js"
   },
   "version": "1.0.0"
 }
