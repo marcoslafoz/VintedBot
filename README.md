@@ -2,7 +2,7 @@
 
 Vinted Views Generator Bot.
 
-![Esta es una imagen de ejemplo](https://i.imgur.com/71lCjzH.png)
+![Preview](https://i.imgur.com/71lCjzH.png)
 
 ## Getting Started
 
@@ -12,21 +12,29 @@ To run this bot, you need to have Node.js installed on your machine.
 
 ### Installation
 
-1. Clone the repository to your local machine using the following command:
+1. Install [Node.js](https://nodejs.org/es)
+
+2. Clone the repository to your local machine using the following command:
    ```
    git clone https://github.com/marcoslafoz/VintedBot.git
    ```
 
-2. Navigate to the project directory:
+3. Navigate to the project directory:
    ```
    cd VintedBot
    ```
 
+4. Install node dependencies:
+   ```
+   npm install
+   ```
+
+
 ## Usage
 
-3. Run the 'vinted.py' script using Node.js:
+5. Run the 'vinted.py' script using Node.js:
    ```
-   node app.js
+   npm start
    ```
 
 Feel free to modify and customize the tool to suit your needs. Please use this tool responsibly and in compliance with Vinted's terms of service and policies.
