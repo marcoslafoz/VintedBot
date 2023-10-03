@@ -29,3 +29,5 @@ function loadItemBox(vintedURL) {
 
     document.body.appendChild(divPrincipal)
 }
+
+//TODO: HACER FUNCION DE DESTRUIR ITEM BOX AL FINALIZAR

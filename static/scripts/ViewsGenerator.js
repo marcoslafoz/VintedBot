@@ -28,6 +28,7 @@ async function generateVisits(vintedLink, views) {
             showViews(i)
         }
 
+        //TODO: LLAMAR A FUNCION DESTRUIR ITEM BOX
         alert("Added " + views + " visits")
     }
 
